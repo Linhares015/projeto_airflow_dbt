@@ -1,48 +1,133 @@
-Overview
-========
+# Projeto: Orquestração do DBT no Airflow Astro
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+Este projeto demonstra como orquestrar o DBT (Data Build Tool) utilizando o Airflow Astro. Nosso foco inicial é a configuração do ambiente com o Astro CLI no Windows Subsystem for Linux (WSL) e a instalação do Docker. Os exemplos de DAG já estão presentes no repositório. No final, detalhamos a integração com o Cosmos DBT.
 
-Project Contents
-================
+---
 
-Your Astro project contains the following files and folders:
+---
+## Aulas YouTube
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
-    - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting started tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
-- Dockerfile: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. If you want to execute other commands or overrides at runtime, specify them here.
-- include: This folder contains any additional files that you want to include as part of your project. It is empty by default.
-- packages.txt: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- requirements.txt: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- plugins: Add custom or community plugins for your project to this file. It is empty by default.
-- airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+ - [Vídeo 1 - Conceitos](https://youtu.be/k-XcMH4P_34)
+ - [Vídeo 2 - Configurando Ambiente, Criando primeira DAG]()
 
-Deploy Your Project Locally
-===========================
+---
+## Sumário
 
-1. Start Airflow on your local machine by running 'astro dev start'.
+- [Requisitos](#requisitos)
+- [Instalação e Configuração do Ambiente](#instalação-e-configuração-do-ambiente)
+  - [1. Configuração do WSL](#1-configuração-do-wsl)
+  - [2. Instalação do Docker](#2-instalação-do-docker)
+  - [3. Instalação do Astro CLI](#3-instalação-do-astro-cli)
+- [Deploy do Projeto](#deploy-do-projeto)
+- [Integração com Cosmos DBT](#integração-com-cosmos-dbt)
+- [Recursos Adicionais](#recursos-adicionais)
 
-This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
+---
 
-- Postgres: Airflow's Metadata Database
-- Webserver: The Airflow component responsible for rendering the Airflow UI
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-- Triggerer: The Airflow component responsible for triggering deferred tasks
+## Requisitos
 
-2. Verify that all 4 Docker containers were created by running 'docker ps'.
+- **WSL (Windows Subsystem for Linux):** Para uma experiência Linux nativa no Windows.
+- **Docker:** Necessário para executar os containers do Airflow e outros serviços.
+- **Astro CLI:** Ferramenta de linha de comando para gerenciar e deployar ambientes Airflow Astro.
+- **Projeto DBT:** Já incluído ou montado via volume conforme as necessidades do ambiente.
 
-Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
+---
 
-3. Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
+## Instalação e Configuração do Ambiente
 
-You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
+### 1. Configuração do WSL
 
-Deploy Your Project to Astronomer
-=================================
+Certifique-se de que o WSL está instalado e configurado no seu sistema Windows. Recomendamos utilizar o **WSL 2** para melhor performance. Caso ainda não tenha, siga os passos abaixo:
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
+1. Habilite o WSL:
+   - Abra o PowerShell como Administrador e execute:
+     ```
+     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+     ```
+2. Habilite a Plataforma de Máquina Virtual:
+   - No mesmo terminal, execute:
+     ```
+     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+     ```
+3. Reinicie o computador.
+4. Instale uma distribuição Linux (por exemplo, Ubuntu) pela Microsoft Store.
+5. Atualize o WSL para a versão 2 (se necessário):
+   ```
+   wsl --set-version Ubuntu 2
+   ```
 
-Contact
-=======
+### 2. Instalação do Docker
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+O Docker é essencial para executar o Airflow em containers. Siga estas instruções:
+
+1. Instale o **Docker Desktop para Windows**:
+   - Faça o download em [docker.com](https://www.docker.com/products/docker-desktop) e siga o assistente de instalação.
+2. Certifique-se de que o Docker está configurado para usar o WSL 2:
+   - No Docker Desktop, acesse as configurações e habilite a integração com sua distribuição Linux instalada (por exemplo, Ubuntu).
+
+Verifique a instalação executando no terminal do WSL:
+```
+docker --version
+```
+
+### 3. Instalação do Astro CLI
+
+O Astro CLI é a ferramenta oficial para gerenciar ambientes Airflow Astro. Para instalá-lo no WSL, siga os passos:
+
+1. Abra o terminal do WSL.
+2. Execute o script de instalação:
+   ```
+   curl -sSL https://install.astronomer.io | sudo bash
+   ```
+   *Obs.: Verifique a [documentação oficial do Astronomer](https://docs.astronomer.io/) para possíveis atualizações no método de instalação.*
+
+3. Após a instalação, verifique se o Astro CLI está instalado:
+   ```
+   astro version
+   ```
+
+---
+
+## Deploy do Projeto
+
+1. **Clone o Repositório:**
+   Clone este repositório para o seu ambiente WSL.
+
+   ```
+   git clone <URL-do-repositório>
+   cd <nome-do-repositório>
+   ```
+
+2. **Configuração dos Arquivos DBT:**
+   Certifique-se de que o seu projeto DBT (incluindo o arquivo `profiles.yml`) esteja disponível:
+   - **Inclusão na Imagem:** Caso os arquivos estejam “bakeados” na imagem.
+   - **Montagem via Volume:** Configure o Docker Compose para montar o diretório do projeto DBT no container do Airflow.
+
+3. **Deploy com Astro CLI:**
+   Utilize o Astro CLI para fazer o deploy do seu ambiente Airflow Astro.
+
+   ```
+   astro dev init
+   astro dev start
+   ```
+
+   Esses comandos irão inicializar e iniciar seu ambiente local do Airflow Astro, que pode ser acessado via [http://localhost:8080](http://localhost:8080).
+
+4. **Verificação:**
+   Acesse a interface web do Airflow e verifique se as DAGs do projeto estão listadas (os exemplos de DAG já estão incluídos no repositório).
+
+---
+
+## Integração com Cosmos DBT
+
+A integração do DBT com o Airflow utilizando o operador Cosmos DBT é abordada nesta configuração para orquestrar comandos DBT de forma simplificada.
+**Observação:** Detalhes e parâmetros específicos da integração com o Cosmos DBT estão descritos na seção final da documentação deste projeto. Consulte essa seção para ajustar o operador conforme seu ambiente.
+
+---
+
+## Recursos Adicionais
+
+- [Documentação do Astronomer](https://docs.astronomer.io/)
+- [Documentação do Astro CLI](https://docs.astronomer.io/)
+- [DBT Documentation](https://docs.getdbt.com/)
+- [Airflow Documentation](https://airflow.apache.org/docs/)

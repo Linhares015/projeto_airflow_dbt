@@ -1,0 +1,263 @@
+[0m11:29:16.921428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad42a7b530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad426d4fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad425e0620>]}
+
+
+============================== 11:29:16.927249 | dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23 ==============================
+[0m11:29:16.927249 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:29:16.927803 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/linhares/projeto_airflow_dbt/projeto_um/logs', 'version_check': 'True', 'profiles_dir': '/home/linhares/projeto_airflow_dbt/projeto_um', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt ls', 'send_anonymous_usage_stats': 'True'}
+[0m11:29:17.631728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad441917c0>]}
+[0m11:29:17.685495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad4255c1a0>]}
+[0m11:29:17.686193 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:29:17.785416 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m11:29:17.786010 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:29:17.786346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad0a58e960>]}
+[0m11:29:19.250259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad0a19baa0>]}
+[0m11:29:19.336711 [debug] [MainThread]: Wrote artifact WritableManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/manifest.json
+[0m11:29:19.338837 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/semantic_manifest.json
+[0m11:29:19.385817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faccbdfc590>]}
+[0m11:29:19.386286 [info ] [MainThread]: Found 10 models, 1 snapshot, 8 seeds, 21 data tests, 8 sources, 491 macros
+[0m11:29:19.386602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dabdc90b-4b7e-4557-aa3b-0fb4e46a3a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad424f7bc0>]}
+[0m11:29:19.387569 [info ] [MainThread]: projeto_um.marts.fct_pedidos_vendidos
+[0m11:29:19.387902 [info ] [MainThread]: projeto_um.intermediate.int_pedidos_vendidos
+[0m11:29:19.388182 [info ] [MainThread]: projeto_um.staging.stg_avaliacoes
+[0m11:29:19.388430 [info ] [MainThread]: projeto_um.staging.stg_carrinho
+[0m11:29:19.388676 [info ] [MainThread]: projeto_um.staging.stg_categorias
+[0m11:29:19.388932 [info ] [MainThread]: projeto_um.staging.stg_clientes
+[0m11:29:19.389226 [info ] [MainThread]: projeto_um.staging.stg_itens_pedidos
+[0m11:29:19.389468 [info ] [MainThread]: projeto_um.staging.stg_pagamentos
+[0m11:29:19.389707 [info ] [MainThread]: projeto_um.staging.stg_pedidos
+[0m11:29:19.389967 [info ] [MainThread]: projeto_um.staging.stg_produtos
+[0m11:29:19.390207 [info ] [MainThread]: projeto_um.avaliacoes
+[0m11:29:19.390444 [info ] [MainThread]: projeto_um.carrinho
+[0m11:29:19.390684 [info ] [MainThread]: projeto_um.categorias
+[0m11:29:19.390979 [info ] [MainThread]: projeto_um.clientes
+[0m11:29:19.391240 [info ] [MainThread]: projeto_um.itens_pedidos
+[0m11:29:19.391488 [info ] [MainThread]: projeto_um.pagamentos
+[0m11:29:19.391751 [info ] [MainThread]: projeto_um.pedidos
+[0m11:29:19.392000 [info ] [MainThread]: projeto_um.produtos
+[0m11:29:19.392256 [info ] [MainThread]: projeto_um.snap_clientes.pedido_snapshot
+[0m11:29:19.392497 [info ] [MainThread]: source:projeto_um.ecomerce.avaliacoes
+[0m11:29:19.392765 [info ] [MainThread]: source:projeto_um.ecomerce.carrinho
+[0m11:29:19.393006 [info ] [MainThread]: source:projeto_um.ecomerce.categorias
+[0m11:29:19.393262 [info ] [MainThread]: source:projeto_um.ecomerce.clientes
+[0m11:29:19.393505 [info ] [MainThread]: source:projeto_um.ecomerce.itens_pedidos
+[0m11:29:19.393750 [info ] [MainThread]: source:projeto_um.ecomerce.pagamentos
+[0m11:29:19.393997 [info ] [MainThread]: source:projeto_um.ecomerce.pedidos
+[0m11:29:19.394249 [info ] [MainThread]: source:projeto_um.ecomerce.produtos
+[0m11:29:19.394489 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_cliente_id
+[0m11:29:19.394735 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_produto_id
+[0m11:29:19.394977 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_cliente_id
+[0m11:29:19.395216 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_produto_id
+[0m11:29:19.395466 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_categorias_id
+[0m11:29:19.395706 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_clientes_id
+[0m11:29:19.396054 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_pedido_id
+[0m11:29:19.396319 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_produto_id
+[0m11:29:19.396558 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_id
+[0m11:29:19.396799 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_pedido_id
+[0m11:29:19.397052 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_cliente_id
+[0m11:29:19.397290 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_endereco_id
+[0m11:29:19.397602 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_id
+[0m11:29:19.398003 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_categoria_id
+[0m11:29:19.398422 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_id
+[0m11:29:19.398915 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_categorias_id
+[0m11:29:19.399430 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_clientes_id
+[0m11:29:19.399878 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pagamentos_id
+[0m11:29:19.400323 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pedidos_id
+[0m11:29:19.400754 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_produtos_id
+[0m11:29:19.401131 [info ] [MainThread]: projeto_um.staging.source_valid_email_ecomerce_clientes_email
+[0m11:29:19.402726 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 2.5780985, "process_in_blocks": "5136", "process_kernel_time": 0.197587, "process_mem_max_rss": "225064", "process_out_blocks": "2400", "process_user_time": 4.149333}
+[0m11:29:19.403251 [debug] [MainThread]: Command `dbt ls` succeeded at 11:29:19.403140 after 2.58 seconds
+[0m11:29:19.403666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad425e3e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faccbdbfef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faccbdbf380>]}
+[0m11:29:19.403989 [debug] [MainThread]: Flushing usage events
+[0m11:29:20.284457 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:30:01.274156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b2c22ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b3369dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b2c21040>]}
+
+
+============================== 11:30:01.277190 | 85073b89-afe2-436b-994a-36498f794208 ==============================
+[0m11:30:01.277190 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:30:01.277674 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linhares/projeto_airflow_dbt/projeto_um', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/linhares/projeto_airflow_dbt/projeto_um/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ls', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:30:01.927072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '85073b89-afe2-436b-994a-36498f794208', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b4338e90>]}
+[0m11:30:01.972357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '85073b89-afe2-436b-994a-36498f794208', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f877a92ac60>]}
+[0m11:30:01.973080 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:30:02.062618 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m11:30:02.176472 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:30:02.176878 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:30:02.227431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '85073b89-afe2-436b-994a-36498f794208', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f877a5f60c0>]}
+[0m11:30:02.311434 [debug] [MainThread]: Wrote artifact WritableManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/manifest.json
+[0m11:30:02.313868 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/semantic_manifest.json
+[0m11:30:02.324959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '85073b89-afe2-436b-994a-36498f794208', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f877a2085f0>]}
+[0m11:30:02.325481 [info ] [MainThread]: Found 10 models, 1 snapshot, 8 seeds, 21 data tests, 8 sources, 491 macros
+[0m11:30:02.325818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85073b89-afe2-436b-994a-36498f794208', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f877aadaea0>]}
+[0m11:30:02.326880 [info ] [MainThread]: projeto_um.marts.fct_pedidos_vendidos
+[0m11:30:02.327198 [info ] [MainThread]: projeto_um.intermediate.int_pedidos_vendidos
+[0m11:30:02.327458 [info ] [MainThread]: projeto_um.staging.stg_avaliacoes
+[0m11:30:02.327710 [info ] [MainThread]: projeto_um.staging.stg_carrinho
+[0m11:30:02.327966 [info ] [MainThread]: projeto_um.staging.stg_categorias
+[0m11:30:02.328220 [info ] [MainThread]: projeto_um.staging.stg_clientes
+[0m11:30:02.328464 [info ] [MainThread]: projeto_um.staging.stg_itens_pedidos
+[0m11:30:02.328707 [info ] [MainThread]: projeto_um.staging.stg_pagamentos
+[0m11:30:02.328950 [info ] [MainThread]: projeto_um.staging.stg_pedidos
+[0m11:30:02.329194 [info ] [MainThread]: projeto_um.staging.stg_produtos
+[0m11:30:02.329437 [info ] [MainThread]: projeto_um.avaliacoes
+[0m11:30:02.329682 [info ] [MainThread]: projeto_um.carrinho
+[0m11:30:02.329926 [info ] [MainThread]: projeto_um.categorias
+[0m11:30:02.330179 [info ] [MainThread]: projeto_um.clientes
+[0m11:30:02.330444 [info ] [MainThread]: projeto_um.itens_pedidos
+[0m11:30:02.330691 [info ] [MainThread]: projeto_um.pagamentos
+[0m11:30:02.330932 [info ] [MainThread]: projeto_um.pedidos
+[0m11:30:02.331171 [info ] [MainThread]: projeto_um.produtos
+[0m11:30:02.331411 [info ] [MainThread]: projeto_um.snap_clientes.pedido_snapshot
+[0m11:30:02.331679 [info ] [MainThread]: source:projeto_um.ecomerce.avaliacoes
+[0m11:30:02.331923 [info ] [MainThread]: source:projeto_um.ecomerce.carrinho
+[0m11:30:02.332173 [info ] [MainThread]: source:projeto_um.ecomerce.categorias
+[0m11:30:02.332433 [info ] [MainThread]: source:projeto_um.ecomerce.clientes
+[0m11:30:02.332677 [info ] [MainThread]: source:projeto_um.ecomerce.itens_pedidos
+[0m11:30:02.332922 [info ] [MainThread]: source:projeto_um.ecomerce.pagamentos
+[0m11:30:02.333164 [info ] [MainThread]: source:projeto_um.ecomerce.pedidos
+[0m11:30:02.333404 [info ] [MainThread]: source:projeto_um.ecomerce.produtos
+[0m11:30:02.333774 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_cliente_id
+[0m11:30:02.334063 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_produto_id
+[0m11:30:02.334321 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_cliente_id
+[0m11:30:02.334580 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_produto_id
+[0m11:30:02.334822 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_categorias_id
+[0m11:30:02.335064 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_clientes_id
+[0m11:30:02.335302 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_pedido_id
+[0m11:30:02.335543 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_produto_id
+[0m11:30:02.335791 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_id
+[0m11:30:02.336037 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_pedido_id
+[0m11:30:02.336283 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_cliente_id
+[0m11:30:02.336619 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_endereco_id
+[0m11:30:02.336892 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_id
+[0m11:30:02.337157 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_categoria_id
+[0m11:30:02.337402 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_id
+[0m11:30:02.337644 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_categorias_id
+[0m11:30:02.337887 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_clientes_id
+[0m11:30:02.338126 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pagamentos_id
+[0m11:30:02.338361 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pedidos_id
+[0m11:30:02.338610 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_produtos_id
+[0m11:30:02.338869 [info ] [MainThread]: projeto_um.staging.source_valid_email_ecomerce_clientes_email
+[0m11:30:02.339733 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 1.1589131, "process_in_blocks": "0", "process_kernel_time": 0.24165, "process_mem_max_rss": "215272", "process_out_blocks": "1280", "process_user_time": 2.832141}
+[0m11:30:02.340124 [debug] [MainThread]: Command `dbt ls` succeeded at 11:30:02.340039 after 1.16 seconds
+[0m11:30:02.340460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b3369dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f877a81fce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b2787ec0>]}
+[0m11:30:02.340798 [debug] [MainThread]: Flushing usage events
+[0m11:30:03.226014 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:47:26.123587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39cb111370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39cafd8260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39cb111f40>]}
+
+
+============================== 11:47:26.128908 | d21b5510-067b-4f22-bd21-43f97f396b1a ==============================
+[0m11:47:26.128908 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:47:26.129410 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/linhares/projeto_airflow_dbt/projeto_um', 'log_path': '/home/linhares/projeto_airflow_dbt/projeto_um/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ls -s tag:vendas', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:47:28.008096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd21b5510-067b-4f22-bd21-43f97f396b1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3992bda900>]}
+[0m11:47:28.054039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd21b5510-067b-4f22-bd21-43f97f396b1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39cbab3d40>]}
+[0m11:47:28.054733 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:47:28.164865 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m11:47:28.358759 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:47:28.359170 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:47:28.410705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd21b5510-067b-4f22-bd21-43f97f396b1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3992933b00>]}
+[0m11:47:28.495992 [debug] [MainThread]: Wrote artifact WritableManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/manifest.json
+[0m11:47:28.521767 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/semantic_manifest.json
+[0m11:47:28.695219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd21b5510-067b-4f22-bd21-43f97f396b1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39926ec620>]}
+[0m11:47:28.695714 [info ] [MainThread]: Found 10 models, 1 snapshot, 8 seeds, 21 data tests, 8 sources, 491 macros
+[0m11:47:28.696028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd21b5510-067b-4f22-bd21-43f97f396b1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3992adaf00>]}
+[0m11:47:28.696679 [info ] [MainThread]: projeto_um.marts.fct_pedidos_vendidos
+[0m11:47:28.696993 [info ] [MainThread]: projeto_um.intermediate.int_pedidos_vendidos
+[0m11:47:28.699478 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 2.7030153, "process_in_blocks": "183632", "process_kernel_time": 0.336773, "process_mem_max_rss": "215216", "process_out_blocks": "1272", "process_user_time": 2.963608}
+[0m11:47:28.699971 [debug] [MainThread]: Command `dbt ls` succeeded at 11:47:28.699868 after 2.70 seconds
+[0m11:47:28.700352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39ce387440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3992c25160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39928a9880>]}
+[0m11:47:28.700665 [debug] [MainThread]: Flushing usage events
+[0m11:47:29.627453 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:29:59.601382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b3a389100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b3a388c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b3996c140>]}
+
+
+============================== 12:29:59.607988 | 88bf260c-f72f-4c26-afd3-e876064bd6e2 ==============================
+[0m12:29:59.607988 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:29:59.608447 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linhares/projeto_airflow_dbt/projeto_um', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/linhares/projeto_airflow_dbt/projeto_um/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt ls', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:30:00.498757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '88bf260c-f72f-4c26-afd3-e876064bd6e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b01ab1dc0>]}
+[0m12:30:00.548169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '88bf260c-f72f-4c26-afd3-e876064bd6e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b01a4d640>]}
+[0m12:30:00.549056 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:30:00.656928 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m12:30:00.824549 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:30:00.825017 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:30:00.892671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '88bf260c-f72f-4c26-afd3-e876064bd6e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b01836ed0>]}
+[0m12:30:01.003733 [debug] [MainThread]: Wrote artifact WritableManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/manifest.json
+[0m12:30:01.007411 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/semantic_manifest.json
+[0m12:30:01.026496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '88bf260c-f72f-4c26-afd3-e876064bd6e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b019a7ce0>]}
+[0m12:30:01.027073 [info ] [MainThread]: Found 10 models, 1 snapshot, 8 seeds, 21 data tests, 8 sources, 491 macros
+[0m12:30:01.027652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '88bf260c-f72f-4c26-afd3-e876064bd6e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b084c8590>]}
+[0m12:30:01.028924 [info ] [MainThread]: projeto_um.marts.fct_pedidos_vendidos
+[0m12:30:01.029307 [info ] [MainThread]: projeto_um.intermediate.int_pedidos_vendidos
+[0m12:30:01.029610 [info ] [MainThread]: projeto_um.staging.stg_avaliacoes
+[0m12:30:01.029868 [info ] [MainThread]: projeto_um.staging.stg_carrinho
+[0m12:30:01.030121 [info ] [MainThread]: projeto_um.staging.stg_categorias
+[0m12:30:01.030371 [info ] [MainThread]: projeto_um.staging.stg_clientes
+[0m12:30:01.030627 [info ] [MainThread]: projeto_um.staging.stg_itens_pedidos
+[0m12:30:01.030875 [info ] [MainThread]: projeto_um.staging.stg_pagamentos
+[0m12:30:01.031141 [info ] [MainThread]: projeto_um.staging.stg_pedidos
+[0m12:30:01.031416 [info ] [MainThread]: projeto_um.staging.stg_produtos
+[0m12:30:01.031815 [info ] [MainThread]: projeto_um.avaliacoes
+[0m12:30:01.032178 [info ] [MainThread]: projeto_um.carrinho
+[0m12:30:01.032548 [info ] [MainThread]: projeto_um.categorias
+[0m12:30:01.032904 [info ] [MainThread]: projeto_um.clientes
+[0m12:30:01.033193 [info ] [MainThread]: projeto_um.itens_pedidos
+[0m12:30:01.033445 [info ] [MainThread]: projeto_um.pagamentos
+[0m12:30:01.033723 [info ] [MainThread]: projeto_um.pedidos
+[0m12:30:01.034041 [info ] [MainThread]: projeto_um.produtos
+[0m12:30:01.034378 [info ] [MainThread]: projeto_um.snap_clientes.pedido_snapshot
+[0m12:30:01.034643 [info ] [MainThread]: source:projeto_um.ecomerce.avaliacoes
+[0m12:30:01.034892 [info ] [MainThread]: source:projeto_um.ecomerce.carrinho
+[0m12:30:01.035136 [info ] [MainThread]: source:projeto_um.ecomerce.categorias
+[0m12:30:01.035376 [info ] [MainThread]: source:projeto_um.ecomerce.clientes
+[0m12:30:01.035617 [info ] [MainThread]: source:projeto_um.ecomerce.itens_pedidos
+[0m12:30:01.035877 [info ] [MainThread]: source:projeto_um.ecomerce.pagamentos
+[0m12:30:01.036121 [info ] [MainThread]: source:projeto_um.ecomerce.pedidos
+[0m12:30:01.036359 [info ] [MainThread]: source:projeto_um.ecomerce.produtos
+[0m12:30:01.036607 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_cliente_id
+[0m12:30:01.036849 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_avaliacoes_produto_id
+[0m12:30:01.037098 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_cliente_id
+[0m12:30:01.037340 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_carrinho_produto_id
+[0m12:30:01.037597 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_categorias_id
+[0m12:30:01.037837 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_clientes_id
+[0m12:30:01.038094 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_pedido_id
+[0m12:30:01.038335 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_itens_pedidos_produto_id
+[0m12:30:01.038574 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_id
+[0m12:30:01.038813 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pagamentos_pedido_id
+[0m12:30:01.039053 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_cliente_id
+[0m12:30:01.039293 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_endereco_id
+[0m12:30:01.039601 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_pedidos_id
+[0m12:30:01.040014 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_categoria_id
+[0m12:30:01.040340 [info ] [MainThread]: projeto_um.staging.source_not_null_ecomerce_produtos_id
+[0m12:30:01.040597 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_categorias_id
+[0m12:30:01.040870 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_clientes_id
+[0m12:30:01.041115 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pagamentos_id
+[0m12:30:01.041357 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_pedidos_id
+[0m12:30:01.041602 [info ] [MainThread]: projeto_um.staging.source_unique_ecomerce_produtos_id
+[0m12:30:01.041847 [info ] [MainThread]: projeto_um.staging.source_valid_email_ecomerce_clientes_email
+[0m12:30:01.043899 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 1.5421075, "process_in_blocks": "6200", "process_kernel_time": 0.267107, "process_mem_max_rss": "215292", "process_out_blocks": "1280", "process_user_time": 3.15924}
+[0m12:30:01.044673 [debug] [MainThread]: Command `dbt ls` succeeded at 12:30:01.044523 after 1.54 seconds
+[0m12:30:01.045137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b398f7560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b398f77a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b01664aa0>]}
+[0m12:30:01.045591 [debug] [MainThread]: Flushing usage events
+[0m12:30:01.964432 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:32:10.041322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f97f4b6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f98365370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f99b9be90>]}
+
+
+============================== 12:32:10.044150 | d2eacdc3-d561-4bc2-a2ad-d107bd494efe ==============================
+[0m12:32:10.044150 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:32:10.044572 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/linhares/projeto_airflow_dbt/projeto_um', 'log_path': '/home/linhares/projeto_airflow_dbt/projeto_um/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ls -s tag:vendas', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:32:10.798094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd2eacdc3-d561-4bc2-a2ad-d107bd494efe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f64342ea0>]}
+[0m12:32:10.846337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd2eacdc3-d561-4bc2-a2ad-d107bd494efe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f640decc0>]}
+[0m12:32:10.847027 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:32:10.942849 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m12:32:11.059546 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:32:11.060006 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:32:11.111721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd2eacdc3-d561-4bc2-a2ad-d107bd494efe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f5f907f50>]}
+[0m12:32:11.200449 [debug] [MainThread]: Wrote artifact WritableManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/manifest.json
+[0m12:32:11.202911 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/linhares/projeto_airflow_dbt/projeto_um/target/semantic_manifest.json
+[0m12:32:11.214478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd2eacdc3-d561-4bc2-a2ad-d107bd494efe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f5f7542f0>]}
+[0m12:32:11.214957 [info ] [MainThread]: Found 10 models, 1 snapshot, 8 seeds, 21 data tests, 8 sources, 491 macros
+[0m12:32:11.215311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2eacdc3-d561-4bc2-a2ad-d107bd494efe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f5f705880>]}
+[0m12:32:11.215992 [info ] [MainThread]: projeto_um.marts.fct_pedidos_vendidos
+[0m12:32:11.216298 [info ] [MainThread]: projeto_um.intermediate.int_pedidos_vendidos
+[0m12:32:11.217095 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 1.2676283, "process_in_blocks": "0", "process_kernel_time": 0.299847, "process_mem_max_rss": "217052", "process_out_blocks": "1272", "process_user_time": 2.940437}
+[0m12:32:11.217462 [debug] [MainThread]: Command `dbt ls` succeeded at 12:32:11.217372 after 1.27 seconds
+[0m12:32:11.217796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f97cd9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f98c0ba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f5fde7ec0>]}
+[0m12:32:11.218089 [debug] [MainThread]: Flushing usage events
+[0m12:32:12.083671 [debug] [MainThread]: An error was encountered while trying to flush usage events

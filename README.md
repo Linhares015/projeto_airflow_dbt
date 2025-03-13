@@ -8,7 +8,8 @@ Este projeto demonstra como orquestrar o DBT (Data Build Tool) utilizando o Airf
 ## Aulas YouTube
 
  - [Vídeo 1 - Conceitos](https://youtu.be/k-XcMH4P_34)
- - [Vídeo 2 - Configurando Ambiente, Criando primeira DAG]()
+ - [Vídeo 2 - Configurando Ambiente, Criando primeira DAG](https://youtu.be/UBsrb4kJDP8)
+ - [Vídeo 3 - Cosmos, instalando e executando dags](https://youtu.be/BI5HsgviSRQ)
 
 ---
 ## Sumário
@@ -126,7 +127,8 @@ A integração do DBT com o Airflow utilizando o operador Cosmos DBT é abordada
 ---
 
 ## Recursos Adicionais
-
+- [Cosmos Demo](https://github.com/astronomer/cosmos-demo)
+- [Documentação do Cosmos](https://astronomer.github.io/astronomer-cosmos/getting_started/astro.html)
 - [Documentação do Astronomer](https://docs.astronomer.io/)
 - [Documentação do Astro CLI](https://docs.astronomer.io/)
 - [DBT Documentation](https://docs.getdbt.com/)

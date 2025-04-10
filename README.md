@@ -8,8 +8,7 @@ Este projeto demonstra como orquestrar o DBT (Data Build Tool) utilizando o Airf
 ## Aulas YouTube
 
  - [Vídeo 1 - Conceitos](https://youtu.be/k-XcMH4P_34)
- - [Vídeo 2 - Configurando Ambiente, Criando primeira DAG](https://youtu.be/UBsrb4kJDP8)
- - [Vídeo 3 - Cosmos, instalando e executando dags](https://youtu.be/BI5HsgviSRQ)
+ - [Série completa aqui](https://www.udemy.com/course/workshop-airflow-dbt-modernizando-seus-pipelines-de-dados/?referralCode=F53C75C3C5AD5F71CAA2)
 
 ---
 ## Sumário
